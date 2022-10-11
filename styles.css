@@ -1,0 +1,149 @@
+:root {
+    --white: hsl(0, 0%, 100%);
+    --lightGrey: hsl(217, 12%, 63%);
+    --mediumGrey: hsla(216, 12%, 54%, 0.205);
+    --darkBlue: hsl(213, 19%, 18%);
+    --veryDarkBlue: hsl(216, 12%, 8%);
+    --orange: hsl(25, 97%, 53%);
+  }
+
+  body {
+    padding: 0;
+    margin: 0;
+    height: 100vh;
+    font-family: "Overpass", sans-serif;
+    background-color: var(--veryDarkBlue);
+    display: flex;
+    justify-content: center;
+    align-items: center;
+  }
+  
+.card{
+    background: var(--darkBlue);
+    padding: 2rem 1.75rem;
+    border-radius: 20px;
+    width: 30%;
+    margin: 2em auto;
+}
+
+.circle-star{
+    padding: 0.5rem;
+    width: 1.5rem;
+    background: var(--mediumGrey);
+    border-radius: 100%;
+    margin-bottom: 1rem;
+}
+
+.heading{
+    font-size: 1.8rem;
+    font-weight: 700;
+    color: var(--white);
+    padding-bottom: 0.5rem;
+}
+.paragraph{
+    line-height: 1.5em;
+  margin-bottom: 1rem;
+  font-size: 0.9rem;
+}
+.numbers,.paragraph{
+    color: var(--lightGrey);
+}
+.numbers{
+    display: flex;
+    width: 100%;
+    justify-content: space-between;
+    margin-bottom: 1.5rem;
+}
+.circle-number{
+    background: var(--mediumGrey);
+    cursor: pointer;
+    padding: 1.2rem 1.5rem;
+    border-radius: 100%;
+    font-size: 1.0rem;
+    font-weight: 400;
+}
+
+.circle-number:hover{
+    background: var(--lightGrey);
+    color: white;
+    font-weight: 700;
+}
+.circle-number:active{
+    background: var(--orange);
+    color: white;
+    font-weight: 700;
+}
+.selected{
+    background: var(--orange);
+    color: white;
+    font-weight: 700;
+}
+.submit{
+    color: white;
+    width: 100%;
+    border: none;
+    padding: 0.7rem 0;
+    background: var(--orange);
+    border-radius: 50px;
+    font-size: 0.8rem;
+    letter-spacing: 0.2rem;
+    font-weight: bold;
+    cursor: pointer;
+}
+.submit:focus{
+    border: none
+}
+.submit:active{
+    background: var(--white);
+    color: var(--orange);
+}
+
+
+#thanks{
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    text-align: center;
+    display: none;
+}
+
+.illustration{
+    width: 10rem;
+    margin-bottom: 1.5rem;
+}
+.rate{
+    color: var(--orange);
+    background: var(--mediumGrey);
+    padding: 0.5rem 1rem;
+    border-radius: 50px;
+    font-size: 0.8rem;
+    letter-spacing: .08rem;
+    font-weight: lighter;
+    margin-bottom: 2rem;
+}
+
+/* Extra small devices (phones, 600px and down) */
+@media only screen and (max-width: 600px) {
+    .card{
+        width: 80%;
+    }
+}
+/* Small devices (portrait tablets and large phones, 600px and up) */
+@media only screen and (min-width: 600px) {
+    .card{
+        width: 60%;
+    }
+}
+/* Medium devices (landscape tablets, 768px and up) */
+@media only screen and (min-width: 768px) {
+    .card{
+        width: 45%!important;
+    }
+}
+/* Large devices (laptops/desktops, 992px and up) */
+@media only screen and (min-width: 992px) {
+    .card{
+        width: 30%!important;
+    }
+}
